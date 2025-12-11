@@ -1,12 +1,21 @@
 function ResultadoMetas({ metas }) {
     return (
         <>
-            <h2>85%: {metas.meta85}</h2>
-            <h2>90%: {metas.meta90}</h2>
-            <h2>95%: {metas.meta95}</h2>
-            <h2>100%: {metas.meta100}</h2>
-            <h2>105%: {metas.meta105}</h2>
-            <h2>110%: {metas.meta110}</h2>
+            <section>
+                <h2>Valores de 90% da meta</h2>
+                <h3>Cheio: {metas.meta90}</h3>
+                <h3>Considerado: {metas.meta85}</h3>
+            </section>
+            <section>
+                <h2>Valores de 100% da meta</h2>
+                <h3>Cheio: {metas.meta100}</h3>
+                <h3>Considerado: {metas.meta95}</h3>
+            </section>
+            <section>
+                <h2>Valores de 90% da meta</h2>
+                <h3>Cheio: {metas.meta110}</h3>
+                <h3>Considerado: {metas.meta105}</h3>
+            </section>
         </>
     );
 }
