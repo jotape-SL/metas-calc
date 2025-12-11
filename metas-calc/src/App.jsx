@@ -15,12 +15,12 @@ function App() {
   const [meta110, setMeta110] = useState(0);
 
   function calcularMetas() {
-    setMeta85((((Number(metaIntegral) - Number(valorVendidoNaSemana))*.85)/ Number(diasDaSemanaRestantes)));
-    setMeta90((((Number(metaIntegral) - Number(valorVendidoNaSemana))*.9)/ Number(diasDaSemanaRestantes)));
-    setMeta95((((Number(metaIntegral) - Number(valorVendidoNaSemana))*.95)/ Number(diasDaSemanaRestantes)));
+    setMeta85((((Number(metaIntegral)*.85) - Number(valorVendidoNaSemana))/ Number(diasDaSemanaRestantes)));
+    setMeta90((((Number(metaIntegral)*.9) - Number(valorVendidoNaSemana))/ Number(diasDaSemanaRestantes)));
+    setMeta95((((Number(metaIntegral)*.95) - Number(valorVendidoNaSemana))/ Number(diasDaSemanaRestantes)));
     setMeta100(((Number(metaIntegral) - Number(valorVendidoNaSemana))/ Number(diasDaSemanaRestantes)));
-    setMeta105((((Number(metaIntegral) - Number(valorVendidoNaSemana))*1.05)/ Number(diasDaSemanaRestantes)));
-    setMeta110((((Number(metaIntegral) - Number(valorVendidoNaSemana))*1.1)/ Number(diasDaSemanaRestantes)));
+    setMeta105((((Number(metaIntegral)*1.05) - Number(valorVendidoNaSemana))/ Number(diasDaSemanaRestantes)));
+    setMeta110((((Number(metaIntegral)*1.1) - Number(valorVendidoNaSemana))/ Number(diasDaSemanaRestantes)));
   }
 
   
