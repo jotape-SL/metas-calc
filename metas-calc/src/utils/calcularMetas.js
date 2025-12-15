@@ -4,7 +4,7 @@ export function calcularMetas(metaIntegral, vendidoNaSemana, diasRestantes) {
     const v = Number(vendidoNaSemana);
     const d = Number(diasRestantes);
 
-    const calc = (porcentagem) => ((m * porcentagem) - v) / d;
+    const calc = (porcentagem) => Math.round((((m * porcentagem) - v) / d) * 100) / 100;
 
     return {
         meta85: calc(0.85),

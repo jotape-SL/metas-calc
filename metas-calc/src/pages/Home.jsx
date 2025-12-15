@@ -1,11 +1,12 @@
 import { useState } from 'react';
+import styled from 'styled-components';
 import ResultadoMetas from '../components/ResultadoMetas';
 import { calcularMetas } from '../utils/calcularMetas';
 
 function Home() {
-    const [metaIntegral, setMetaIntegral] = useState(0);
-    const [valorVendidoNaSemana, setValorVendidoNaSemana] = useState(0);
-    const [diasDaSemanaRestantes, setDiasDaSemanaRestantes] = useState(0);
+    const [metaIntegral, setMetaIntegral] = useState('');
+    const [valorVendidoNaSemana, setValorVendidoNaSemana] = useState('');
+    const [diasDaSemanaRestantes, setDiasDaSemanaRestantes] = useState('');
     const [metas, setMetas] = useState(null);
 
     function handleCalcular() {
@@ -14,31 +15,78 @@ function Home() {
     }
 
     return (
-        <div style={{ padding: "20px" }}>
+        <HomeContainer>
             <h1>Calculadora de Metas</h1>
 
-            <div>
-                <label>Valor da meta semanal (100%):</label><br />
-                <input type="number" value={metaIntegral} onChange={(e) => setMetaIntegral(e.target.value)} />
-            </div>
+            <InputContainer>
+                <label>Valor da meta semanal (100%):</label>
+                <CamposDosNumeros type="number" value={metaIntegral} onChange={(e) => setMetaIntegral(e.target.value)} />
+            </InputContainer>
 
-            <div style={{ marginTop: "10px" }}>
-                <label>Total vendido na semana:</label><br />
-                <input type="number" value={valorVendidoNaSemana} onChange={(e) => setValorVendidoNaSemana(e.target.value)} />
-            </div>
+            <InputContainer>
+                <label>Total vendido na semana:</label>
+                <CamposDosNumeros type="number" value={valorVendidoNaSemana} onChange={(e) => setValorVendidoNaSemana(e.target.value)} />
+            </InputContainer>
 
-            <div style={{ marginTop: "10px" }}>
-                <label>Dias restantes na semana:</label><br />
-                <input type="number" value={diasDaSemanaRestantes} onChange={(e) => setDiasDaSemanaRestantes(e.target.value)} />
-            </div>
+            <InputContainer>
+                <label>Dias restantes na semana:</label>
+                <CamposDosNumeros type="number" value={diasDaSemanaRestantes} onChange={(e) => setDiasDaSemanaRestantes(e.target.value)} />
+            </InputContainer>
 
-            <button onClick={handleCalcular} style={{ marginTop: "10px" }}>
+            <BotaoCalculo onClick={handleCalcular} style={{ marginTop: "10px" }}>
                 Calcular metas
-            </button>
+            </BotaoCalculo>
 
             {metas && <ResultadoMetas metas={metas} />}
-        </div>
+        </HomeContainer>
     );
 }
 
 export default Home;
+
+const BotaoCalculo = styled.button`
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+`
+const InputContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`
+const HomeContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`
+
+const CamposDosNumeros = styled.input`
+    width: 35vw;
+    padding: 4px;
+    font-size: 16px;
+    color: #000;
+    background-color: #fff;
+
+    border: 1px solid #ccc;
+    border-radius: 8px;
+
+    outline: none;
+
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+    &:focus {
+    border-color: #ffe600;
+    box-shadow: 0 0 0 2px rgba(217, 255, 0, 0.2);
+    }
+
+    &:disabled {
+    background: #f5f5f5;
+    cursor: not-allowed;
+    opacity: 0.7;
+`
