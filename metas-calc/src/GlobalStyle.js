@@ -13,8 +13,8 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 400;
 
     color-scheme: light dark;
-    color: rgba(0, 0, 0, 0.87);
-    background-color: #ffffff;
+    color: #DFCEB9;
+    background-color: #423427;
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -27,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #fff;
+    background-color: #423427;
     color: #000;
     -webkit-font-smoothing: antialiased;
   }

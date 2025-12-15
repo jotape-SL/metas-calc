@@ -51,7 +51,7 @@ const BotaoCalculo = styled.button`
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #0A0908;
   cursor: pointer;
   transition: border-color 0.25s;
 `
@@ -67,11 +67,11 @@ const HomeContainer = styled.div`
 `
 
 const CamposDosNumeros = styled.input`
-    width: 35vw;
+    width: 45vw;
     padding: 4px;
     font-size: 16px;
-    color: #000;
-    background-color: #fff;
+    color: #0A0908;
+    background-color: #F2F4F3;
 
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -81,8 +81,8 @@ const CamposDosNumeros = styled.input`
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
 
     &:focus {
-    border-color: #ffe600;
-    box-shadow: 0 0 0 2px rgba(217, 255, 0, 0.2);
+    border-color: #49111C;
+    box-shadow: 0 0 0 2px #49111C;
     }
 
     &:disabled {
