@@ -60,6 +60,27 @@ const GlobalStyle = createGlobalStyle`
       -moz-appearance: textfield;
     }
   }
+  @media print {
+    #root {
+
+    color-scheme: light dark;
+    color: #000;
+    background-color: #FFF;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+      margin: 0;
+      padding: 0;
+      background: white;
+    }
+
+    button {
+      display: none;
+    }
+  }
 `;
 
 export default GlobalStyle;

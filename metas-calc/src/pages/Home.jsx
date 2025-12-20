@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-import ResultadoMetas from '../components/ResultadoMetas';
 import { calcularMetas } from '../utils/calcularMetas';
+import ResultadosAgrupados from '../components/ResultadosAgrupados';
 
 function Home() {
     const [metaIntegral, setMetaIntegral] = useState('');
@@ -15,30 +15,33 @@ function Home() {
     }
 
     return (
-        <HomeContainer>
-            <h1>Calculadora de Metas</h1>
+        <>
+            <HomeContainer>
+                <h1>Calculadora de Metas</h1>
 
-            <InputContainer>
-                <label>Valor da meta semanal (100%):</label>
-                <CamposDosNumeros type="number" value={metaIntegral} onChange={(e) => setMetaIntegral(e.target.value)} />
-            </InputContainer>
+                <InputContainer>
+                    <label>Valor da meta semanal (100%):</label>
+                    <CamposDosNumeros type="number" value={metaIntegral} onChange={(e) => setMetaIntegral(e.target.value)} />
+                </InputContainer>
 
-            <InputContainer>
-                <label>Total vendido na semana:</label>
-                <CamposDosNumeros type="number" value={valorVendidoNaSemana} onChange={(e) => setValorVendidoNaSemana(e.target.value)} />
-            </InputContainer>
+                <InputContainer>
+                    <label>Total vendido na semana:</label>
+                    <CamposDosNumeros type="number" value={valorVendidoNaSemana} onChange={(e) => setValorVendidoNaSemana(e.target.value)} />
+                </InputContainer>
 
-            <InputContainer>
-                <label>Dias restantes na semana:</label>
-                <CamposDosNumeros type="number" value={diasDaSemanaRestantes} onChange={(e) => setDiasDaSemanaRestantes(e.target.value)} />
-            </InputContainer>
+                <InputContainer>
+                    <label>Dias restantes na semana:</label>
+                    <CamposDosNumeros type="number" value={diasDaSemanaRestantes} onChange={(e) => setDiasDaSemanaRestantes(e.target.value)} />
+                </InputContainer>
 
-            <BotaoCalculo onClick={handleCalcular} style={{ marginTop: "10px" }}>
-                Calcular metas
-            </BotaoCalculo>
+                <BotaoCalculo onClick={handleCalcular} style={{ marginTop: "10px" }}>
+                    Calcular metas
+                </BotaoCalculo>
 
-            {metas && <ResultadoMetas metas={metas} />}
-        </HomeContainer>
+            </HomeContainer>
+            {metas && <ResultadosAgrupados metas={metas} />}
+        </>
+
     );
 }
 
@@ -59,11 +62,20 @@ const InputContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 1rem;
+    label{
+        margin-bottom: 1rem;
+        font-size: 1.2 rem;
+    }
 `
 const HomeContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media print {
+        display: none;
+    }
 `
 
 const CamposDosNumeros = styled.input`

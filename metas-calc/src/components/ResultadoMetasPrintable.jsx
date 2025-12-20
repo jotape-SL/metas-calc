@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 
-
-function ResultadoMetas({ metas }) {
+function ResultadoMetasPrintable({ metas }) {
     return (
-        <>
+        <GeneralContainer>
             <ContainerMetas>
                 <h2>Valores de 90% da meta</h2>
                 <h3>Cheio: {metas.meta90}</h3>
@@ -19,11 +18,11 @@ function ResultadoMetas({ metas }) {
                 <h3>Cheio: {metas.meta110}</h3>
                 {/* <h3>Considerado: {metas.meta105}</h3> */}
             </ContainerMetas>
-        </>
+        </GeneralContainer>
     );
 }
 
-export default ResultadoMetas;
+export default ResultadoMetasPrintable;
 
 const ContainerMetas = styled.section`
   padding: 2rem;
@@ -32,8 +31,14 @@ const ContainerMetas = styled.section`
   align-items: center;
   justify-content: center;
   z-index: 0;
+`;
+
+const GeneralContainer = styled.div`
+  display: none;
 
   @media print {
-    display: none;
+    background-color: #fff;
+    color: #000;
+    display: block;
   }
-`;
+`
