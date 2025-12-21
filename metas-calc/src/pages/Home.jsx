@@ -2,6 +2,7 @@ import { useState } from 'react';
 import styled from 'styled-components';
 import { calcularMetas } from '../utils/calcularMetas';
 import ResultadosAgrupados from '../components/ResultadosAgrupados';
+import { formateDinheiro } from '../utils/formateDinheiro';
 
 function Home() {
     const [metaIntegral, setMetaIntegral] = useState('');
@@ -21,12 +22,12 @@ function Home() {
 
                 <InputContainer>
                     <label>Valor da meta semanal (100%):</label>
-                    <CamposDosNumeros type="number" value={metaIntegral} onChange={(e) => setMetaIntegral(e.target.value)} />
+                    <CamposDosNumeros type="text" value={metaIntegral} onChange={(e) => setMetaIntegral(formateDinheiro(e.target.value))} />
                 </InputContainer>
 
                 <InputContainer>
                     <label>Total vendido na semana:</label>
-                    <CamposDosNumeros type="number" value={valorVendidoNaSemana} onChange={(e) => setValorVendidoNaSemana(e.target.value)} />
+                    <CamposDosNumeros type="text" value={valorVendidoNaSemana} onChange={(e) => setValorVendidoNaSemana(formateDinheiro(e.target.value))} />
                 </InputContainer>
 
                 <InputContainer>
