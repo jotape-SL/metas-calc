@@ -48,9 +48,9 @@ function Home() {
 export default Home;
 
 const BotaoCalculo = styled.button`
-  border-radius: 8px;
+  border-radius: 5px;
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
+  padding: 0.8em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
@@ -79,7 +79,7 @@ const HomeContainer = styled.div`
 `
 
 const CamposDosNumeros = styled.input`
-    width: 45vw;
+    max-width: 200px;
     padding: 4px;
     font-size: 16px;
     color: #0A0908;
