@@ -1,10 +1,13 @@
+import { parseDinheiro } from "./parseDinheiro";
 
 export function calcularMetas(metaIntegral, vendidoNaSemana, diasRestantes) {
-    const m = Number(metaIntegral);
-    const v = Number(vendidoNaSemana);
-    const d = Number(diasRestantes);
+    const m = Number(parseDinheiro(metaIntegral));
+    const v = Number(parseDinheiro(vendidoNaSemana));
+    const d = parseInt(diasRestantes, 10);
 
-    const calc = (porcentagem) => ((m * porcentagem) - v) / d;
+    if (!d || d <= 0) return null;
+
+    const calc = (porcentagem) => Math.round((((m * porcentagem) - v) / d) * 100) / 100;
 
     return {
         meta85: calc(0.85),
