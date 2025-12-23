@@ -6,7 +6,7 @@ function ResultadoMetasPrintable({ metas }) {
       <ContainerGeralMetas className="meta90">
         <ContainerMetas>
           <h2>Considerado</h2>
-          <h3>R$ {metas.meta85}</h3>
+          <h3>R$ 9 {metas.meta85}</h3>
         </ContainerMetas>
         <ContainerMetas>
           <h2>Cheio</h2>
@@ -16,7 +16,7 @@ function ResultadoMetasPrintable({ metas }) {
       <ContainerGeralMetas className="meta100">
         <ContainerMetas>
           <h2>Considerado</h2>
-          <h3>R$ {metas.meta95}</h3>
+          <h3>R$ 10{metas.meta95}</h3>
         </ContainerMetas>
         <ContainerMetas>
           <h2>Cheio</h2>
@@ -26,7 +26,7 @@ function ResultadoMetasPrintable({ metas }) {
       <ContainerGeralMetas className="meta110">
         <ContainerMetas>
           <h2>Considerado</h2>
-          <h3>R$ {metas.meta105}</h3>
+          <h3>R$ 11{metas.meta105}</h3>
         </ContainerMetas>
         <ContainerMetas>
           <h2>Cheio</h2>
@@ -61,16 +61,16 @@ padding: .5rem;
   position: absolute;
 
   &.meta90{
-    top: 0;
-    left: 380px;
+    top: 100px;/*80px*/
+    left: 40px;/*20px*/
   }
   &.meta100{
-    top: 0;
-    left: 20px;
+    top: 20px;/*0px*/
+    left: 380px;
   }
   &.meta110{
-    top: 80PX;
-    left: 20px;
+    top: 20px;/*0px*/
+    left: 40px;/*20px*/
   }
 
   @media print{
@@ -81,7 +81,7 @@ padding: .5rem;
 `
 
 const GeneralContainer = styled.div`
-  display: none;
+  /* display: none; */
 
   @media print {
     background-color: #fff;
