@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-
+import { formateDinheiro } from '../utils/formateDinheiro';
 
 function ResultadoMetas({ metas }) {
     return (
@@ -10,12 +10,12 @@ function ResultadoMetas({ metas }) {
                     <div>
                         <h3>Cheio</h3>
                         <span>-</span>
-                        <h3>R$ {metas.meta90}</h3>
+                        <h3>R$ {formateDinheiro(metas.meta90)}</h3>
                     </div>
                     <div>
                         <h3>Considerado</h3>
                         <span>-</span>
-                        <h3>R$ {metas.meta85}</h3>
+                        <h3>R$ {formateDinheiro(metas.meta85)}</h3>
                     </div>
                 </DadosDisplay>
             </ContainerMetas>
@@ -25,12 +25,12 @@ function ResultadoMetas({ metas }) {
                     <div>
                         <h3>Cheio</h3>
                         <span>-</span>
-                        <h3>R$ {metas.meta100}</h3>
+                        <h3>R$ {formateDinheiro(metas.meta100)}</h3>
                     </div>
                     <div>
                         <h3>Considerado</h3>
                         <span>-</span>
-                        <h3>R$ {metas.meta95}</h3>
+                        <h3>R$ {formateDinheiro(metas.meta95)}</h3>
                     </div>
                 </DadosDisplay>
             </ContainerMetas>
@@ -40,12 +40,12 @@ function ResultadoMetas({ metas }) {
                     <div>
                         <h3>Cheio</h3>
                         <span>-</span>
-                        <h3>R$ {metas.meta110}</h3>
+                        <h3>R$ {formateDinheiro(metas.meta110)}</h3>
                     </div>
                     <div>
                         <h3>Considerado</h3>
                         <span>-</span>
-                        <h3>R$ {metas.meta105}</h3>
+                        <h3>R$ {formateDinheiro(metas.meta105)}</h3>
                     </div>
                 </DadosDisplay>
             </ContainerMetas>
