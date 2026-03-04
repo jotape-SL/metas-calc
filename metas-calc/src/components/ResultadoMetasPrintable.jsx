@@ -4,45 +4,55 @@ import MetasPrep from '../assets/MetasPrep.png';
 
 function ResultadoMetasPrintable({ metas }) {
   return (
-    <A4Page>
-      <GeneralContainer>
-        <A4Background />
-        <ContainerGeralMetas className="meta90">
-          <ContainerMetas>
-            <h2>Considerado</h2>
-            <h3>R$ {formateDinheiro(metas.meta85)}</h3>
-          </ContainerMetas>
-          <ContainerMetas>
-            <h2>Cheio</h2>
-            <h3>R$ {formateDinheiro(metas.meta90)}</h3>
-          </ContainerMetas>
-        </ContainerGeralMetas>
-        <ContainerGeralMetas className="meta100">
-          <ContainerMetas>
-            <h2>Considerado</h2>
-            <h3>R$ {formateDinheiro(metas.meta95)}</h3>
-          </ContainerMetas>
-          <ContainerMetas>
-            <h2>Cheio</h2>
-            <h3>R$ {formateDinheiro(metas.meta100)}</h3>
-          </ContainerMetas>
-        </ContainerGeralMetas>
-        <ContainerGeralMetas className="meta110">
-          <ContainerMetas>
-            <h2>Considerado</h2>
-            <h3>R$ {formateDinheiro(metas.meta105)}</h3>
-          </ContainerMetas>
-          <ContainerMetas>
-            <h2>Cheio</h2>
-            <h3>R$ {formateDinheiro(metas.meta110)}</h3>
-          </ContainerMetas>
-        </ContainerGeralMetas>
-      </GeneralContainer>
-    </A4Page>
+    <GeneralContainer>
+      <A4Background />
+      <ContainerGeralMetas className="meta90">
+        <ContainerMetas>
+          <h2>Considerado</h2>
+          <h3>R$ {formateDinheiro(metas.meta85)}</h3>
+        </ContainerMetas>
+        <ContainerMetas>
+          <h2>Cheio</h2>
+          <h3>R$ {formateDinheiro(metas.meta90)}</h3>
+        </ContainerMetas>
+      </ContainerGeralMetas>
+      <ContainerGeralMetas className="meta100">
+        <ContainerMetas>
+          <h2>Considerado</h2>
+          <h3>R$ {formateDinheiro(metas.meta95)}</h3>
+        </ContainerMetas>
+        <ContainerMetas>
+          <h2>Cheio</h2>
+          <h3>R$ {formateDinheiro(metas.meta100)}</h3>
+        </ContainerMetas>
+      </ContainerGeralMetas>
+      <ContainerGeralMetas className="meta110">
+        <ContainerMetas>
+          <h2>Considerado</h2>
+          <h3>R$ {formateDinheiro(metas.meta105)}</h3>
+        </ContainerMetas>
+        <ContainerMetas>
+          <h2>Cheio</h2>
+          <h3>R$ {formateDinheiro(metas.meta110)}</h3>
+        </ContainerMetas>
+      </ContainerGeralMetas>
+    </GeneralContainer>
+
 
 
   );
 }
+
+// ------------------------------------------------------- modelo com A4 para testes de posicionamento ---------------------------------------------------
+// function ResultadoMetasPrintable({ metas }) {
+//   return (
+//     <A4Page>
+//       -- Conteudo --
+//     </A4Page>
+
+
+//   );
+// }
 
 export default ResultadoMetasPrintable;
 
@@ -82,22 +92,22 @@ const ContainerGeralMetas = styled.div`
   }
 `;
 
-const A4Page = styled.div`
-  width: 210mm;
-  height: 297mm;
-  position: relative;
-  background: white;
+// const A4Page = styled.div`
+//   width: 210mm;
+//   height: 297mm;
+//   position: relative;
+//   background: white;
 
-  /* só pra visualizar na tela */
-  margin: 0 auto;
-  box-shadow: 0 0 10px rgba(0,0,0,.3);
+//   /* só pra visualizar na tela */
+//   margin: 0 auto;
+//   box-shadow: 0 0 10px rgba(0,0,0,.3);
 
-  @media print {
-    margin: 0;
-    box-shadow: none;
-    page-break-after: always;
-  }
-`;
+//   @media print {
+//     margin: 0;
+//     box-shadow: none;
+//     page-break-after: always;
+//   }
+// `;
 
 const A4Background = styled.div`
   position: absolute;
@@ -108,47 +118,8 @@ const A4Background = styled.div`
   background-repeat: no-repeat;
 `;
 
-// const ContainerMetas = styled.section`
-//   font-size: .6rem;
-//   width: 100px;
-//   padding: .2rem .5rem;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: center;
-//   z-index: 0;
-//   border: 1px solid #000;
-//   border-radius: 5px;
-// `;
-// const ContainerGeralMetas = styled.div`
-// padding: .5rem;
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: space-between;
-//   width: 290px;
-//   position: absolute;
-
-//   &.meta90{
-//     top: 100px;/*80px*/
-//     left: 40px;/*20px*/
-//   }
-//   &.meta100{
-//     top: 20px;/*0px*/
-//     left: 380px;
-//   }
-//   &.meta110{
-//     top: 20px;/*0px*/
-//     left: 40px;/*20px*/
-//   }
-
-//   @media print{
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: space-between;
-//   }
-// `
 const GeneralContainer = styled.div`
-  /* display: none; */
+  display: none;
   @media print {
     background-color: #fff;
     color: #000;

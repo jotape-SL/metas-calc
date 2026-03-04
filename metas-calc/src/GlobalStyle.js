@@ -13,8 +13,6 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 400;
 
     color-scheme: light dark;
-    color: #DFCEB9;
-    background-color: #423427;
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -27,9 +25,10 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #423427;
-    color: #000;
+    background-color: #7EB7FC;
+    color: #ffffff;
     -webkit-font-smoothing: antialiased;
+    max-width: 100%;
   }
 
   button {

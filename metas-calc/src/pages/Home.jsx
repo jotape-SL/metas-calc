@@ -66,7 +66,8 @@ const InputContainer = styled.div`
     padding: 1rem;
     label{
         margin-bottom: 1rem;
-        font-size: 1.2 rem;
+        font-size: 1.3rem;
+        text-shadow: 1px 2px 0px rgba(0,0,0,0.4);
     }
 `
 const HomeContainer = styled.div`
@@ -80,13 +81,14 @@ const HomeContainer = styled.div`
 `
 
 const CamposDosNumeros = styled.input`
-    max-width: 200px;
+    max-width: 300px;
     padding: 4px;
     font-size: 16px;
     color: #0A0908;
     background-color: #F2F4F3;
 
-    border: 1px solid #ccc;
+    /* box-shadow: 20px 20px 0 2px #ff0033; */
+    /* border: 1px solid #ccc; */
     border-radius: 8px;
 
     outline: none;
@@ -94,8 +96,7 @@ const CamposDosNumeros = styled.input`
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
 
     &:focus {
-    border-color: #49111C;
-    box-shadow: 0 0 0 2px #49111C;
+        /* border-color: #49111C; */
     }
 
     &:disabled {
