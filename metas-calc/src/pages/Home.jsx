@@ -69,6 +69,15 @@ const InputContainer = styled.div`
         font-size: 1.3rem;
         text-shadow: 1px 2px 0px rgba(0,0,0,0.4);
     }
+    span{
+        position: absolute;
+        left: 14px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-weight: bold;
+        color: #222;
+        pointer-events: none;
+    }
 `
 const HomeContainer = styled.div`
     display: flex;
@@ -84,23 +93,30 @@ const CamposDosNumeros = styled.input`
     max-width: 300px;
     padding: 4px;
     font-size: 16px;
-    color: #0A0908;
-    background-color: #F2F4F3;
 
-    /* box-shadow: 20px 20px 0 2px #ff0033; */
-    /* border: 1px solid #ccc; */
+    border: none;
+    /* border: 1px solid #000000; */
     border-radius: 8px;
-
     outline: none;
 
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    color: #222;
+
+    background: #ffffff;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.8),
+        0 3px 2px #666,
+        0 6px 12px rgba(0,0,0,0.4);
+
+    transition: transform .08s ease-in-out;
 
     &:focus {
-        /* border-color: #49111C; */
-    }
+    transform: translateY(3px);
 
-    &:disabled {
-    background: #f5f5f5;
-    cursor: not-allowed;
-    opacity: 0.7;
+    background: #dddddd;
+
+    box-shadow:
+      inset 0 4px 2px rgba(0,0,0,0.6),
+      inset 0 -3px 4px rgba(255,255,255,0.4);
+  }
 `
