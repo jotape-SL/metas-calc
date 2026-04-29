@@ -50,6 +50,7 @@ export default Home;
 
 const BotaoCalculo = styled.button`
   border-radius: 5px;
+  color: white;
   border: 1px solid transparent;
   padding: 0.8em 1.2em;
   font-size: 1em;

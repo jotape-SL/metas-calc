@@ -1,4 +1,5 @@
 import ResultadoMetasPrintable from "./ResultadoMetasPrintable";
+import ResultadoMetasPrintableSistemaPreso from "./ResultadoMetasPrintableSistemaPreso";
 import ResultadoMetas from "./ResultadoMetas";
 
 export default function ResultadosAgrupados({ metas }) {
@@ -6,6 +7,7 @@ export default function ResultadosAgrupados({ metas }) {
         <>
             <ResultadoMetas metas={metas} />
             <ResultadoMetasPrintable metas={metas} />
+            <ResultadoMetasPrintableSistemaPreso metas={metas} />
         </>
     )
 }
