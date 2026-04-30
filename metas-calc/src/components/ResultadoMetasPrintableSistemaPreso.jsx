@@ -90,13 +90,7 @@ const ContainerGeralMetas = styled.div`
 
 
 const GeneralContainer = styled.div`
-  /* display: none;
-  @media print {
-    background-color: #fff;
-    color: #000;
-    display: block;
-  } */
-  /* display: none; */
+  display: none;
   @media print {
     background-color: #fff;
     color: #000;

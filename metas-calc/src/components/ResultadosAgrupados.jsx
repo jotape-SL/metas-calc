@@ -6,7 +6,7 @@ export default function ResultadosAgrupados({ metas }) {
     return (
         <>
             <ResultadoMetas metas={metas} />
-            <ResultadoMetasPrintable metas={metas} />
+            {/* <ResultadoMetasPrintable metas={metas} /> */}
             <ResultadoMetasPrintableSistemaPreso metas={metas} />
         </>
     )
